@@ -1,0 +1,70 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap');
+
+:root {
+    --primary: #4267b2;
+    --white: #ffffff;
+    --black: #000000;
+    --orange: #FF6600;
+    --google: #ff6868;
+    --facebook: #68bbff;
+
+    --text-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    overflow: overlay;
+}
+
+.container {
+    height: 100%;
+    max-width: 1620px;
+    margin: auto;
+    padding: 0 50px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.info_form {
+    margin-top: 16px;
+    padding: 13px;
+}
+
+.error_color {
+    color: red;
+}

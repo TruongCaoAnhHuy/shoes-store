@@ -1,0 +1,65 @@
+@keyframes topIn {
+    0% {
+        top: -200px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes topInImg {
+    0% {
+        right: -500px;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+.animated_title,
+.animated_desc,
+.animated_img,
+.animated_btn {
+    position: relative;
+    display: none;
+}
+
+.animated_background {
+    display: none;
+}
+
+
+.carousel img {
+    display: none;
+}
+
+.carousel .slide.selected .animated_background {
+    display: block;
+}
+
+
+.carousel .slide.selected .animated_title {
+    display: block;
+    animation: topIn .5s linear;
+}
+
+.carousel .slide.selected .animated_desc {
+    display: block;
+    animation: topIn .7s linear;
+}
+
+.carousel .slide.selected .animated_btn {
+    display: block;
+    animation: topIn .9s linear;
+}
+
+.carousel .slide.selected .carousel img {
+    display: inline-block;
+}
+
+.carousel .slide.selected .animated_img {
+    display: block;
+    animation: topInImg .7s linear;
+}

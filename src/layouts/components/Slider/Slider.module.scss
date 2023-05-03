@@ -1,0 +1,84 @@
+.wrapper {
+    user-select: none;
+    margin-bottom: 50px;
+}
+
+.content {
+    text-align: left;
+}
+
+.item {
+    display: flex;
+}
+
+.title {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 5.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 60px;
+}
+
+.dark {
+    color: var(--text-color);
+
+    &:not(div) {
+        color: var(--white);
+        border: 2px solid var(--text-color);
+        background-color: var(--text-color);
+    }
+}
+
+.white {
+    color: var(--orange);
+
+    &:not(div) {
+        color: var(--white);
+        border: 2px solid var(--orange);
+        background-color: var(--orange);
+    }
+}
+
+.description {
+    font-size: 1.95rem;
+    line-height: 2.925rem;
+    margin-bottom: 60px;
+    color: #8d8d8d;
+}
+
+.img {
+    width: 700px;
+    height: 500px;
+    pointer-events: none;
+}
+
+
+@keyframes border {
+    0% {
+        border-radius: 58% 42% 38% 62%/42% 55% 45% 58%;
+    }
+
+    50% {
+        border-radius: 31% 69% 59% 41%/28% 24% 76% 72%;
+    }
+
+    100% {
+        border-radius: 58% 42% 38% 62%/42% 55% 45% 58%;
+    }
+}
+
+.background {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    -webkit-transform: translateY(-50%);
+    width: 472px;
+    height: 472px;
+    animation: border 5s infinite;
+    -webkit-animation: border 5s infinite;
+    transform: translateY(-50%);
+    transition: border-radius 13s ease;
+    border-radius: 58% 42% 38% 62%/42% 55% 45% 58%;
+    background-color: var(--primary);
+    z-index: -1;
+}

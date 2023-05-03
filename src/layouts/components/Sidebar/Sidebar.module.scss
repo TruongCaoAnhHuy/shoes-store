@@ -1,0 +1,34 @@
+.wrapper {
+    user-select: none;
+}
+
+.title {
+    margin-bottom: 16px;
+    font-size: 1.625rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.type,
+.color,
+.size {
+    margin-bottom: 26px;
+    width: 100%;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+
+    label {
+        width: 100%;
+        font-size: 1.3rem;
+        color: #8d8d8d;
+        margin-left: 10px;
+    }
+}
+
+.color {}
+
+.size {}

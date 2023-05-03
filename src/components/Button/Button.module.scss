@@ -1,0 +1,64 @@
+.wrapper {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--primary);
+    padding: 8px 18px;
+    border: 2px solid var(--primary);
+
+    &:hover {
+        transition: .1s linear;
+        opacity: 0.8;
+    }
+
+    +.wrapper {
+        margin-left: 13px;
+    }
+}
+
+.primary {
+    color: var(--white);
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+
+    &:hover {
+        transition: .1s linear;
+        opacity: 0.8;
+    }
+}
+
+.small {
+    font-size: 1.04rem;
+    padding: 10px 15px;
+}
+
+.large {
+    font-size: 1.95rem;
+    padding: 13px 26px;
+
+    &:hover {
+        transition: .1s linear;
+        opacity: 0.8;
+    }
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.icon+.title,
+.title+.icon {
+    margin-left: 8px;
+}
+
+.social {
+    padding: 7px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 8px;
+}

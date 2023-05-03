@@ -1,0 +1,42 @@
+.wrapper_hover {
+    cursor: pointer;
+    transition: transform .5s ease;
+
+    &:hover {
+        transform: translateY(-20px);
+    }
+}
+
+.wrapper_hover {
+
+    &:hover .title {
+        color: var(--primary);
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 20px 0;
+}
+
+.icon {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.description {
+
+    .title {
+        font-size: 1.625rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.3rem;
+        color: #8d8d8d;
+    }
+}

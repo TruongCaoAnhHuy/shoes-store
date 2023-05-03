@@ -1,0 +1,30 @@
+.wrapper {
+    height: 350px;
+    box-shadow: 0 8px 24px hsla(210, 8%, 62%, .2);
+    font-size: 1.43rem;
+    padding: 70px 0;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 26px;
+}
+
+.content {
+    text-align: justify;
+
+    p {
+        margin-bottom: 16px;
+    }
+}
+
+.phone {
+    font-weight: 600;
+}
+
+.logo {
+    margin-bottom: 26px;
+    width: 65px;
+    height: 41px;
+}
