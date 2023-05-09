@@ -1,17 +1,26 @@
-import images from '~/assets/image';
 import styles from './ProductDetail.module.scss';
 import classNames from 'classnames/bind';
 import { MinusIcon, PlusIcon } from '~/components/Icons/Icon';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '~/components/Button/Button';
 import { productPopulars } from '~/assets/fakedata/product';
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { product } from '~/assets/fakedata/product';
+import CartItem from '../CartItem/CartItem';
 
 const cx = classNames.bind(styles);
 
 function ProductDetail() {
-    const [quantity, setQuantity] = useState(1);
     const [detailDesc, setDetailDesc] = useState(false);
+
+    const productId = useParams();
+    const productDetail = product.find((item) => item.pPath === productId.pPath.replace('@', ''));
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [productDetail]);
+
+    const [quantity, setQuantity] = useState(1);
 
     const handlePlus = () => {
         setQuantity(quantity + 1);
@@ -32,11 +41,11 @@ function ProductDetail() {
                     <div className="col l-7">
                         <div className={cx('product_image')}>
                             <div className={cx('image_list')}>
-                                <img src={images.activeShoesDenCam} alt="shoes" />
-                                <img src={images.activeShoesDenCam} alt="shoes" />
+                                <img src={productDetail.image} alt="shoes" />
+                                <img src={productDetail.image} alt="shoes" />
                             </div>
                             <div className={cx('image_main')}>
-                                <img src={images.activeShoesDenCam} alt="shoes" />
+                                <img src={productDetail.image} alt="shoes" />
                             </div>
                             <div className={`${cx('product_desc')} ${detailDesc ? cx('expand') : ''}`}>
                                 <h3 className={cx('product_desc_title')}>Chi tiết sản phẩm</h3>
@@ -90,16 +99,18 @@ function ProductDetail() {
                     </div>
                     <div className="col l-5">
                         <div className={cx('product_info')}>
-                            <h1 className={cx('title')}>Giày Run Active - Đen Cam</h1>
-                            <h2 className={cx('price')}>189,000</h2>
+                            <h1 className={cx('title')}>{productDetail.name}</h1>
+                            <h2 className={cx('price')}>
+                                {productDetail.price.slice(0, 3) + ',' + productDetail.price.slice(3)}
+                            </h2>
                             <div className={cx('option')}>
                                 <h3 className={cx('option_title')}>Size: </h3>
                                 <ul className={cx('option_select')}>
-                                    <li className={cx('option_select_item')}>37</li>
-                                    <li className={cx('option_select_item')}>37</li>
-                                    <li className={cx('option_select_item')}>37</li>
-                                    <li className={cx('option_select_item')}>37</li>
-                                    <li className={cx('option_select_item')}>37</li>
+                                    {productDetail.size.map((size) => (
+                                        <li className={cx('option_select_item')} key={size}>
+                                            {size}
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                             <div className={cx('option')}>
@@ -134,25 +145,7 @@ function ProductDetail() {
                 <div className="row">
                     {productPopulars.map((productPopular) => (
                         <div className="col l-3" key={productPopular.id}>
-                            <div className={cx('product_more_item')}>
-                                <Link to={``} className={cx('product_more_info')}>
-                                    <div className={cx('product_more_img')}>
-                                        <img src={productPopular.image} alt="product" />
-                                    </div>
-                                    <p className={cx('product_more_desc')}>{productPopular.desc}</p>
-                                    <div className={cx('product_more_price_wrapper')}>
-                                        <h4 className={cx('product_more_price')}>
-                                            {productPopular.price.slice(0, 3) + ',' + productPopular.price.slice(3)}
-                                        </h4>
-                                        <h4 className={`${cx('product_more_price')} ${cx('product_more_price_sale')}`}>
-                                            {productPopular.sale.slice(0, 3) + ',' + productPopular.sale.slice(3)}
-                                        </h4>
-                                    </div>
-                                </Link>
-                                <div className={cx('product_more_product_btn')}>
-                                    <Button primary>Chọn mua</Button>
-                                </div>
-                            </div>
+                            <CartItem props={productPopular} />
                         </div>
                     ))}
                 </div>

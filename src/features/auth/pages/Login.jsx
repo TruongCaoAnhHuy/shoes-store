@@ -41,6 +41,7 @@ function Login() {
         signInWithEmailAndPassword(auth, values.email, values.password)
             .then(async () => {
                 setLoading(false);
+                localStorage.setItem('user2', JSON.stringify(auth.currentUser));
                 navigate('/');
             })
             .catch((err) => {

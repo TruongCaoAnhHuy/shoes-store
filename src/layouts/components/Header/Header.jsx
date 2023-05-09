@@ -11,25 +11,12 @@ import styles from './Header.module.scss';
 import { UserContext } from '~/App';
 import { Popper as PopperWrapper } from '~/layouts/components/Popper';
 import { CartIcon, LogOutIcon, SearchIcon, UserIcon } from '~/components/Icons/Icon';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { GetTotal } from '~/redux/cartSlice';
 
 const cx = classNames.bind(styles);
 
 function Header() {
-    const { carts } = useSelector((item) => item.user);
-    const [cartQnt, setCartQnt] = useState(-1);
-
-    useEffect(() => {
-        setCartQnt(cartQnt + 1);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [carts]);
-
-    const context = useContext(UserContext);
-    const currentUser = context.currentUser;
-
-    const [isShrink, setIsShrink] = useState(false);
-
-    const menuRef = useRef(null);
     const mainNav = [
         {
             id: 1,
@@ -43,12 +30,26 @@ function Header() {
         },
     ];
 
+    const [isShrink, setIsShrink] = useState(false);
+
+    const { carts, quantity } = useSelector((item) => item.user);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(GetTotal());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [carts]);
+
+    const context = useContext(UserContext);
+    const currentUser = context.currentUser;
+
+    const menuRef = useRef(null);
     const menuToggle = () => {
         menuRef.current.classList.toggle('active');
     };
 
     const logOut = () => {
         auth.signOut();
+        localStorage.removeItem('user2');
     };
 
     useEffect(() => {
@@ -89,7 +90,7 @@ function Header() {
                             <Button className={cx('cart')} to="/cart">
                                 <CartIcon />
                             </Button>
-                            <span className={cx('quality')}>{cartQnt}</span>
+                            <span className={cx('quality')}>{quantity}</span>
                             <TippyHeadless
                                 interactive
                                 hideOnClick={false}

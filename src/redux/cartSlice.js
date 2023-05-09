@@ -7,16 +7,26 @@ const initialState = {
 };
 
 const cartSlice = createSlice({
-    name: 'user',
+    name: 'cart',
     initialState,
     reducers: {
         AddCart: (state, action) => {
-            const find = state.carts.findIndex((item) => item.id === action.payload.id);
-            if (find >= 0) {
-                state.carts[find].quantity += 1;
+            const currentUser = localStorage.getItem('user2');
+            if (currentUser) {
+                const find = state.carts.findIndex(
+                    (item) => item.id === action.payload.id && item.size === action.payload.size,
+                );
+                if (find >= 0) {
+                    state.carts[find].quantity += action.payload.quantity;
+                    alert('Add to cart success !!');
+                } else {
+                    const tempvar = { ...action.payload };
+                    state.carts.push(tempvar);
+                    alert('Add to cart success !!');
+                }
             } else {
-                const tempvar = { ...action.payload, quantity: 1 };
-                state.carts.push(tempvar);
+                alert('Login please !');
+                return;
             }
         },
 
@@ -37,7 +47,11 @@ const cartSlice = createSlice({
 
         Increase: (state, action) => {
             state.carts = state.carts.map((carts) => {
-                if (carts.id === action.payload) {
+                if (
+                    carts.id === action.payload[0] &&
+                    carts.name === action.payload[1] &&
+                    carts.size === action.payload[2]
+                ) {
                     return { ...carts, quantity: carts.quantity + 1 };
                 }
                 return carts;
@@ -47,7 +61,11 @@ const cartSlice = createSlice({
         Decrease: (state, action) => {
             state.carts = state.carts
                 .map((carts) => {
-                    if (carts.id === action.payload) {
+                    if (
+                        carts.id === action.payload[0] &&
+                        carts.name === action.payload[1] &&
+                        carts.size === action.payload[2]
+                    ) {
                         return { ...carts, quantity: carts.quantity - 1 };
                     }
                     return carts;

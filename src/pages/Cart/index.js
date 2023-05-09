@@ -5,7 +5,7 @@ import { Popper as PopperWrapper } from '~/layouts/components/Popper';
 import { DeleteIcon, MinusIcon, PlusIcon } from '~/components/Icons/Icon';
 import { useLayoutEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Decrease, GetTotal, Increase, RemoveCart } from '~/redux/cartSlice';
+import { Decrease, GetTotal, Increase, RemoveCart, UpdateItem } from '~/redux/cartSlice';
 import { useEffect } from 'react';
 
 const cx = classNames.bind(styles);
@@ -48,32 +48,34 @@ function Cart() {
                         >
                             Đặt Hàng
                         </Button>
-                        <Button primary large className={cx('btn_continue')}>
+                        <Button to={'/catalog'} primary large className={cx('btn_continue')}>
                             Tiếp tục mua hàng
                         </Button>
                     </PopperWrapper>
                 </div>
                 <div className="col l-8">
                     <ul className={cx('cart_list')}>
-                        {carts?.map((product) => (
-                            <li className={cx('cart_item')} key={product.id}>
+                        {carts?.map((product, index) => (
+                            <li className={cx('cart_item')} key={index}>
                                 <img className={cx('img')} src={product.image} alt="cart_item" />
                                 <div className={cx('cart_item_info')}>
-                                    <p className={cx('cart_item_desc')}>{product.desc}</p>
+                                    <p className={cx('cart_item_name')}>
+                                        {product.name} - {product.size}
+                                    </p>
                                     <p className={cx('cart_item_price')}>
                                         {product.price.slice(0, 3) + ',' + product.price.slice(3)}
                                     </p>
                                     <div className={cx('quantity')}>
                                         <span
                                             className={cx('quantity_btn')}
-                                            onClick={() => dispatch(Decrease(product.id))}
+                                            onClick={() => dispatch(Decrease([product.id, product.name, product.size]))}
                                         >
                                             <MinusIcon />
                                         </span>
                                         <span className={cx('quantity_input')}>{product.quantity}</span>
                                         <span
                                             className={cx('quantity_btn')}
-                                            onClick={() => dispatch(Increase(product.id))}
+                                            onClick={() => dispatch(Increase([product.id, product.name, product.size]))}
                                         >
                                             <PlusIcon />
                                         </span>

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Fragment, createContext, useEffect, useState } from 'react';
 import { auth } from './firebase';
 
-import { publicRoutes } from '~/routes';
+import { ProtectedRoute, privateRoutes, publicRoutes } from '~/routes';
 import { MainLayout } from '~/layouts/MainLayout';
 
 const UserContext = createContext();
@@ -48,6 +48,25 @@ function App() {
                                     <UserContext.Provider value={values}>
                                         <Layout>
                                             <Page />
+                                        </Layout>
+                                    </UserContext.Provider>
+                                }
+                            />
+                        );
+                    })}
+                    {privateRoutes.map((route, index) => {
+                        const Layout = route.layout === null ? Fragment : MainLayout;
+                        const Page = route.component;
+                        return (
+                            <Route
+                                key={index}
+                                path={route.path}
+                                element={
+                                    <UserContext.Provider value={values}>
+                                        <Layout>
+                                            <ProtectedRoute>
+                                                <Page />
+                                            </ProtectedRoute>
                                         </Layout>
                                     </UserContext.Provider>
                                 }

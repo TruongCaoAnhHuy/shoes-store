@@ -131,6 +131,7 @@ function Register() {
                 await updateProfile(user, {
                     displayName: values.name,
                 });
+                localStorage.setItem('user2', JSON.stringify(auth.currentUser));
                 navigate('/');
                 window.location.reload();
             })

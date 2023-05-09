@@ -15,6 +15,10 @@
 .title {
     margin-bottom: 10px;
     font-size: 1.625rem;
+
+    span {
+        font-weight: 700;
+    }
 }
 
 .price {
@@ -40,6 +44,8 @@
 }
 
 .btn_continue {
+    display: block;
+    text-align: center;
     width: 100%;
     margin: 0 !important;
 }
@@ -64,7 +70,7 @@
     align-items: center;
 }
 
-.cart_item_desc {
+.cart_item_name {
     width: 300px;
     text-align: left;
 }

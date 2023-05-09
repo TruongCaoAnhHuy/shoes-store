@@ -27,7 +27,7 @@
     }
 }
 
-.description {
+.product_name {
     color: #8d8d8d;
     font-size: 1.625rem;
     font-weight: 400;
@@ -63,4 +63,11 @@
         height: 1px;
         background-color: #8d8d8d;
     }
+}
+
+.close_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 10px;
 }
