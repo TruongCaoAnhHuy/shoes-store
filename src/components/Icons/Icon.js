@@ -207,3 +207,32 @@ export const BackBtnIcon = ({ width = '1.82rem', height = '1.82rem' }) => (
         <path d="M17.77 3.77L16 2 6 12l10 10 1.77-1.77L9.54 12z"></path>
     </svg>
 );
+
+export const MenuBarIcon = ({ width = '3.25rem', height = '3.25rem' }) => (
+    <svg
+        stroke="currentColor"
+        fill="currentColor"
+        strokeWidth="0"
+        viewBox="0 0 24 24"
+        height={height}
+        width={width}
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z"></path>
+    </svg>
+);
+
+export const BackBtnIconMobile = ({ width = '3.25rem', height = '3.25rem' }) => (
+    <svg
+        stroke="currentColor"
+        fill="currentColor"
+        strokeWidth="0"
+        viewBox="0 0 24 24"
+        height={height}
+        width={width}
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path d="M17.77 3.77L16 2 6 12l10 10 1.77-1.77L9.54 12z"></path>
+    </svg>
+);

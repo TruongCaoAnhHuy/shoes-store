@@ -13,7 +13,7 @@ function Cartlist({ className }) {
         <div className={classes}>
             <div className="row">
                 {product.map((product) => (
-                    <div className="col l-4" key={product.id}>
+                    <div className={`col l-4 m-6 c-12 ${cx('cartlist-item')}`} key={product.id}>
                         <CartItem props={product} />
                     </div>
                 ))}

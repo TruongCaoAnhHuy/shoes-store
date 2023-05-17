@@ -9,7 +9,7 @@ function Footer() {
     return (
         <footer className={cx('wrapper')}>
             <div className="container row">
-                <div className="col l-3">
+                <div className="col l-3 m-6 c-12">
                     <h2 className={cx('title')}>Tổng đài hỗ trợ</h2>
                     <div className={cx('content')}>
                         <p>
@@ -32,7 +32,7 @@ function Footer() {
                         </p>
                     </div>
                 </div>
-                <div className="col l-3">
+                <div className="col l-3 m-6 c-12">
                     <h2 className={cx('title')}>Về shoes</h2>
                     <div className={cx('content')}>
                         <p>
@@ -52,7 +52,7 @@ function Footer() {
                         </p>
                     </div>
                 </div>
-                <div className="col l-3">
+                <div className="col l-3 m-6 c-12">
                     <h2 className={cx('title')}>Chắm sóc khách hàng</h2>
                     <div className={cx('content')}>
                         <p>
@@ -66,7 +66,7 @@ function Footer() {
                         </p>
                     </div>
                 </div>
-                <div className="col l-3">
+                <div className="col l-3 m-6 c-12">
                     <img className={cx('logo')} src={images.logo} alt="logo" />
                     <div className={cx('content')}>
                         <p>

@@ -4,9 +4,14 @@ import classNames from 'classnames/bind';
 import { Popper as PopperWrapper } from '../Popper';
 import { MinusIcon, PlusIcon } from '~/components/Icons/Icon';
 import Button from '~/components/Button/Button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { AddCart } from '~/redux/cartSlice';
+import { useNavigate } from 'react-router-dom';
+import { db } from '~/firebase';
+import { ref, set } from 'firebase/database';
+import { useContext } from 'react';
+import { UserContext } from '~/App';
 
 const cx = classNames.bind(styles);
 
@@ -27,12 +32,12 @@ function ProductModal(props) {
         }
     };
 
-    const [isChoose, setIsChoose] = useState(undefined);
+    const [isSize, setIsSize] = useState(undefined);
 
     const dispatch = useDispatch();
 
     const check = () => {
-        if (isChoose === undefined) {
+        if (isSize === undefined) {
             alert('Choose size please !!!');
             return false;
         }
@@ -40,18 +45,43 @@ function ProductModal(props) {
         return true;
     };
 
+    // const [cartItems, setCartItems] = useState([]);
+
+    // useEffect(() => {
+    //     const cartItemsRef = db.ref('cartItems');
+    //     cartItemsRef.on('value', (snapshot) => {
+    //         const items = snapshot.val();
+    //         setCartItems(items);
+    //     });
+
+    //     // Hủy đăng ký lắng nghe khi component bị unmount
+    //     return () => {
+    //         cartItemsRef.off('value');
+    //     };
+    // }, []);
+
     const addToCart = () => {
         if (check()) {
             const newItem = {
                 id: props.value.id,
                 pPath: props.value.pPath,
                 name: props.value.name || '',
-                size: isChoose || '',
+                size: isSize || '',
                 quantity: quantity || '',
                 price: props.value.price,
                 image: props.value.image,
             };
             dispatch(AddCart(newItem));
+            // db.ref('cartItems').push(newItem);
+        }
+    };
+
+    const navigate = useNavigate();
+
+    const clickBuyNow = () => {
+        if (check()) {
+            addToCart();
+            navigate('/cart');
         }
     };
 
@@ -80,10 +110,10 @@ function ProductModal(props) {
                                     {props.value.size.map((size) => (
                                         <li
                                             className={`${cx('option_select_item')} ${cx(
-                                                isChoose === size ? 'choose' : '',
+                                                isSize === size ? 'choose' : '',
                                             )}`}
                                             key={size}
-                                            onClick={() => setIsChoose(size)}
+                                            onClick={() => setIsSize(size)}
                                         >
                                             {size}
                                         </li>
@@ -106,7 +136,7 @@ function ProductModal(props) {
                                 <Button large primary onClick={addToCart}>
                                     Thêm vào giỏ
                                 </Button>
-                                <Button large primary>
+                                <Button large primary onClick={clickBuyNow}>
                                     Mua ngay
                                 </Button>
                             </div>

@@ -2,9 +2,9 @@ import classNames from 'classnames/bind';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '~/firebase';
+import { auth, db } from '~/firebase';
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 import styles from './auth.module.scss';
 import Button from '~/components/Button/Button';
@@ -14,10 +14,15 @@ import usePasswordToggle from '~/hooks/usePasswordToggle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Modal from '~/components/Modal/Modal';
+import { child, get, onValue, ref } from 'firebase/database';
+import { UserContext } from '~/App';
+import { useEffect } from 'react';
 
 const cx = classNames.bind(styles);
 
 function Login() {
+    const context = useContext(UserContext);
+
     const navigate = useNavigate();
     const [values, setValues] = useState({
         email: '',
@@ -27,6 +32,8 @@ function Login() {
     const [errorMsg, setErrorMsg] = useState('');
 
     const [loading, setLoading] = useState(false);
+
+    const [dataFirebase, setDataFirebase] = useState([]);
 
     const handleLoginSubmit = (e) => {
         e.preventDefault();
@@ -38,10 +45,21 @@ function Login() {
         setLoading(true);
         setErrorMsg('');
 
+        // const starCountRef = ref(db, 'users/' + context.userName + '/cart');
+        // onValue(starCountRef, (snapshot) => {
+        //     const data = snapshot.val();
+        //     setDataFirebase(data);
+        //     console.log(data);
+        //     // localStorage.setItem('cartItems', JSON.stringify(data.cart));
+        // });
+
         signInWithEmailAndPassword(auth, values.email, values.password)
             .then(async () => {
                 setLoading(false);
                 localStorage.setItem('user2', JSON.stringify(auth.currentUser));
+
+                // console.log(dataFirebase);
+
                 navigate('/');
             })
             .catch((err) => {
@@ -49,6 +67,18 @@ function Login() {
                 setErrorMsg(err.message);
             });
     };
+
+    // get(child(db, 'users/' + context.userName))
+    //     .then((snapshot) => {
+    //         if (snapshot.exists()) {
+    //             console.log(snapshot.val());
+    //         } else {
+    //             console.log('No data available');
+    //         }
+    //     })
+    //     .catch((error) => {
+    //         console.error(error);
+    //     });
 
     const [PasswordInputType, ToggleIcon] = usePasswordToggle();
 
@@ -98,7 +128,7 @@ function Login() {
                     </div>
 
                     <div className={cx('btn_wrapper')}>
-                        <span className={cx('error_msg')}>{errorMsg}</span>
+                        <span className={cx('error_msg')}>{errorMsg.replace('Firebase:', '')}</span>
                         <Button small primary className={cx('continue_btn')}>
                             Continue
                         </Button>

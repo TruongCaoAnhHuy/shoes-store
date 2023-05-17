@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { ref, set } from 'firebase/database';
+import { db } from '~/firebase';
 
 const initialState = {
     carts: [],
@@ -28,6 +30,7 @@ const cartSlice = createSlice({
                 alert('Login please !');
                 return;
             }
+            localStorage.setItem('cartItems', JSON.stringify(state.carts));
         },
 
         GetTotal: (state) => {
@@ -42,35 +45,32 @@ const cartSlice = createSlice({
         },
 
         RemoveCart: (state, action) => {
-            state.carts = state.carts.filter((item) => item.id !== action.payload);
+            state.carts = state.carts.filter(
+                (item) => item.id !== action.payload[0] || item.size !== action.payload[1],
+            );
+            localStorage.setItem('cartItems', JSON.stringify(state.carts));
         },
 
         Increase: (state, action) => {
             state.carts = state.carts.map((carts) => {
-                if (
-                    carts.id === action.payload[0] &&
-                    carts.name === action.payload[1] &&
-                    carts.size === action.payload[2]
-                ) {
+                if (carts.id === action.payload[0] && carts.size === action.payload[1]) {
                     return { ...carts, quantity: carts.quantity + 1 };
                 }
                 return carts;
             });
+            localStorage.setItem('cartItems', JSON.stringify(state.carts));
         },
 
         Decrease: (state, action) => {
             state.carts = state.carts
                 .map((carts) => {
-                    if (
-                        carts.id === action.payload[0] &&
-                        carts.name === action.payload[1] &&
-                        carts.size === action.payload[2]
-                    ) {
+                    if (carts.id === action.payload[0] && carts.size === action.payload[1]) {
                         return { ...carts, quantity: carts.quantity - 1 };
                     }
                     return carts;
                 })
                 .filter((item) => item.quantity !== 0);
+            localStorage.setItem('cartItems', JSON.stringify(state.carts));
         },
     },
 });

@@ -17,8 +17,9 @@ function Slider() {
                 showThumbs={false}
                 showStatus={false}
                 showArrows={false}
-                autoPlay
-                interval="3500"
+                showIndicators={false}
+                // autoPlay
+                // interval="3500"
                 emulateTouch
             >
                 {slideItems.map((slideItem) => (
@@ -30,7 +31,12 @@ function Slider() {
                             <div className={cx('description')}>
                                 <span className="animated_desc">{slideItem.description}</span>
                             </div>
-                            <Button className={`${cx(slideItem.color)} animated_btn`} primary large>
+                            <Button
+                                to={`/catalog/@${slideItem.pPath}`}
+                                className={`${cx(slideItem.color)} ${cx('btn')} animated_btn`}
+                                primary
+                                large
+                            >
                                 Xem chi tiết
                             </Button>
                         </div>

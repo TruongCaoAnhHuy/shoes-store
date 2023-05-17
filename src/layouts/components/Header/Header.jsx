@@ -3,16 +3,27 @@ import TippyHeadless from '@tippyjs/react/headless';
 import { Link, NavLink } from 'react-router-dom';
 import { useContext, useEffect, useRef, useState } from 'react';
 
-import { auth } from '~/firebase';
+import { auth, db } from '~/firebase';
 
 import images from '~/assets/image';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import { UserContext } from '~/App';
 import { Popper as PopperWrapper } from '~/layouts/components/Popper';
-import { CartIcon, LogOutIcon, SearchIcon, UserIcon } from '~/components/Icons/Icon';
+import {
+    BackBtnIcon,
+    BackBtnIconMobile,
+    CartIcon,
+    LogOutIcon,
+    MenuBarIcon,
+    SearchIcon,
+    UserIcon,
+} from '~/components/Icons/Icon';
 import { useDispatch, useSelector } from 'react-redux';
 import { GetTotal } from '~/redux/cartSlice';
+import { onAuthStateChanged } from 'firebase/auth';
+import { onValue, ref, set } from 'firebase/database';
+import { ref as sRef } from 'firebase/storage';
 
 const cx = classNames.bind(styles);
 
@@ -32,7 +43,7 @@ function Header() {
 
     const [isShrink, setIsShrink] = useState(false);
 
-    const { carts, quantity } = useSelector((item) => item.user);
+    const { carts } = useSelector((item) => item.user);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(GetTotal());
@@ -50,7 +61,22 @@ function Header() {
     const logOut = () => {
         auth.signOut();
         localStorage.removeItem('user2');
+        // set(ref(db, 'users/' + context.userName), {
+        //     username: context.userName,
+        //     cart: carts,
+        // });
+        // localStorage.removeItem('cartItems');
     };
+
+    // onAuthStateChanged(auth)
+    //     .then(
+    //         set(ref(db, 'users/' + context.userName), {
+    //             authTest: auth,
+    //             username: context.userName,
+    //             cart: carts,
+    //         }),
+    //     )
+    //     .catch((err) => console.log(err));
 
     useEffect(() => {
         const handleScroll = () => {
@@ -68,12 +94,35 @@ function Header() {
         };
     }, []);
 
+    const cartsLocal = JSON.parse(localStorage.getItem('cartItems'));
+    const quantityLocal = cartsLocal ? cartsLocal.reduce((total, item) => total + Number(item.quantity), 0) : 0;
+
+    // ipad
+    const [toggleMenuMobile, setToggleMenuMobile] = useState(false);
+
+    const handleToggleMenuMobile = () => {
+        setToggleMenuMobile(!toggleMenuMobile);
+    };
+
     return (
         <header className={`${cx('wrapper')} ${isShrink ? cx('header-shrink') : ''}`}>
             <div ref={menuRef} className={`${cx('container')} container`}>
-                <ul className={cx('nav')}>
+                <div className={cx('menu-mobile-bar')} onClick={handleToggleMenuMobile}>
+                    <MenuBarIcon />
+                </div>
+                <ul className={`${cx('nav')} ${toggleMenuMobile ? cx('nav-active') : ''}`}>
+                    <div className={cx('back')} onClick={handleToggleMenuMobile}>
+                        <BackBtnIconMobile />
+                    </div>
                     {mainNav.map((nav) => (
-                        <li key={nav.id} className={`${cx('nav-item')}`} onClick={menuToggle}>
+                        <li
+                            key={nav.id}
+                            className={`${cx('nav-item')}`}
+                            onClick={() => {
+                                menuToggle();
+                                setToggleMenuMobile(false);
+                            }}
+                        >
                             <NavLink to={nav.path} className={({ isActive }) => cx(`${isActive ? 'active' : ''}`)}>
                                 {nav.title}
                             </NavLink>
@@ -90,7 +139,7 @@ function Header() {
                             <Button className={cx('cart')} to="/cart">
                                 <CartIcon />
                             </Button>
-                            <span className={cx('quality')}>{quantity}</span>
+                            <span className={cx('quality')}>{quantityLocal}</span>
                             <TippyHeadless
                                 interactive
                                 hideOnClick={false}

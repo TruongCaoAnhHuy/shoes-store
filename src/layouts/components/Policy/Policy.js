@@ -12,7 +12,7 @@ function Policy() {
     return (
         <div className="row">
             {policyData.map((policy) => (
-                <div className="col l-3" key={policy.id}>
+                <div className={`col l-3 m-6 c-12 ${cx('policy-item')}`} key={policy.id}>
                     <PopperWrapper className={cx('wrapper_hover')}>
                         <Link to="/policy" className={cx('wrapper')}>
                             <div className={cx('icon')}>{policy.icon}</div>

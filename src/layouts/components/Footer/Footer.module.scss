@@ -1,5 +1,4 @@
 .wrapper {
-    height: 350px;
     box-shadow: 0 8px 24px hsla(210, 8%, 62%, .2);
     font-size: 1.43rem;
     padding: 70px 0;
@@ -27,4 +26,18 @@
     margin-bottom: 26px;
     width: 65px;
     height: 41px;
+}
+
+//  responesive
+@media only screen and (max-width: 1024px) {
+
+    .logo,
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 40px;
+    }
 }

@@ -115,3 +115,10 @@
         color: var(--primary);
     }
 }
+
+// responesive
+@media only screen and (max-width: 1024px) {
+    .cart_info {
+        margin-bottom: 30px;
+    }
+}

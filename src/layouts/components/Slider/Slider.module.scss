@@ -19,6 +19,12 @@
     margin-bottom: 60px;
 }
 
+.btn {
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
 .dark {
     color: var(--text-color);
 
@@ -44,6 +50,7 @@
     line-height: 2.925rem;
     margin-bottom: 60px;
     color: #8d8d8d;
+    text-align: justify;
 }
 
 .img {
@@ -81,4 +88,60 @@
     border-radius: 58% 42% 38% 62%/42% 55% 45% 58%;
     background-color: var(--primary);
     z-index: -1;
+}
+
+// responesive 
+
+@media only screen and (max-width: 1024px) {
+
+    .item {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .title,
+    .description {
+        margin-bottom: 30px;
+    }
+
+    .img {
+        width: 600px !important;
+        height: 400px;
+    }
+
+    .background {
+        top: 30%;
+        right: 25%;
+        width: 372px;
+        height: 372px;
+    }
+}
+
+// phone
+@media only screen and (max-width: 600px) {
+    .content {
+        margin-top: 100px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .img {
+        top: 20px;
+        width: 300px !important;
+        height: 200px;
+    }
+
+    .background {
+        top: 20%;
+        right: 10%;
+        width: 272px;
+        height: 272px;
+    }
+
 }

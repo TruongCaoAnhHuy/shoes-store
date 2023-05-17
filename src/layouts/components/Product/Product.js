@@ -17,7 +17,7 @@ function Product() {
             <div className={cx('product')}>
                 <div className="row">
                     {productTrends.map((productTrend) => (
-                        <div className="col l-3" key={productTrend.id}>
+                        <div className="col l-3 m-6 c-12" key={productTrend.id}>
                             <CartItem props={productTrend} />
                         </div>
                     ))}
@@ -29,7 +29,7 @@ function Product() {
             <div className={cx('product')}>
                 <div className="row">
                     {productNews.map((productNew) => (
-                        <div className="col l-3" key={productNew.id}>
+                        <div className="col l-3 m-6 c-12" key={productNew.id}>
                             <CartItem props={productNew} />
                         </div>
                     ))}
@@ -42,7 +42,7 @@ function Product() {
             <div className={cx('product')}>
                 <div className="row">
                     {productPopulars.map((productPopular) => (
-                        <div className="col l-3" key={productPopular.id}>
+                        <div className="col l-3 m-6 c-12" key={productPopular.id}>
                             <CartItem props={productPopular} />
                         </div>
                     ))}

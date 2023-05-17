@@ -1,5 +1,8 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
+// import { getFirestore } from 'firebase/firestore';
+import { getDatabase } from 'firebase/database';
+
 const firebaseConfig = {
     apiKey: 'AIzaSyBf1X7MyvrcxYU2-SU3uEITpl54so99JWY',
     authDomain: 'shoes-web-6216d.firebaseapp.com',
@@ -11,5 +14,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getDatabase(app);
 
-export { app, auth };
+export { app, auth, db };

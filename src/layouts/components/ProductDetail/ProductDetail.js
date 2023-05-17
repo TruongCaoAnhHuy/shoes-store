@@ -4,9 +4,11 @@ import { MinusIcon, PlusIcon } from '~/components/Icons/Icon';
 import { useEffect, useState } from 'react';
 import Button from '~/components/Button/Button';
 import { productPopulars } from '~/assets/fakedata/product';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { product } from '~/assets/fakedata/product';
 import CartItem from '../CartItem/CartItem';
+import { useDispatch } from 'react-redux';
+import { AddCart } from '~/redux/cartSlice';
 
 const cx = classNames.bind(styles);
 
@@ -31,6 +33,43 @@ function ProductDetail() {
             setQuantity(1);
         } else {
             setQuantity(quantity - 1);
+        }
+    };
+
+    const [isSize, setIsSize] = useState(undefined);
+
+    const dispatch = useDispatch();
+
+    const check = () => {
+        if (isSize === undefined) {
+            alert('Choose size please !!!');
+            return false;
+        }
+
+        return true;
+    };
+
+    const addToCart = () => {
+        if (check()) {
+            const newItem = {
+                id: productDetail.id,
+                pPath: productDetail.pPath,
+                name: productDetail.name || '',
+                size: isSize || '',
+                quantity: quantity || '',
+                price: productDetail.price,
+                image: productDetail.image,
+            };
+            dispatch(AddCart(newItem));
+        }
+    };
+
+    const navigate = useNavigate();
+
+    const clickBuyNow = () => {
+        if (check()) {
+            addToCart();
+            navigate('/cart');
         }
     };
 
@@ -107,7 +146,13 @@ function ProductDetail() {
                                 <h3 className={cx('option_title')}>Size: </h3>
                                 <ul className={cx('option_select')}>
                                     {productDetail.size.map((size) => (
-                                        <li className={cx('option_select_item')} key={size}>
+                                        <li
+                                            className={`${cx('option_select_item')} ${cx(
+                                                isSize === size ? 'choose' : '',
+                                            )}`}
+                                            key={size}
+                                            onClick={() => setIsSize(size)}
+                                        >
                                             {size}
                                         </li>
                                     ))}
@@ -126,10 +171,10 @@ function ProductDetail() {
                                 </div>
                             </div>
                             <div className={cx('option')}>
-                                <Button large primary>
+                                <Button large primary onClick={addToCart}>
                                     Thêm vào giỏ
                                 </Button>
-                                <Button large primary>
+                                <Button large primary onClick={clickBuyNow}>
                                     Mua ngay
                                 </Button>
                             </div>

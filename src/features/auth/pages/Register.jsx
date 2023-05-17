@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { auth } from '~/firebase';
+import { auth, db } from '~/firebase';
 
 import { useState } from 'react';
 
@@ -15,6 +15,8 @@ import usePasswordToggle from '~/hooks/usePasswordToggle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Modal from '~/components/Modal/Modal';
+import { addDoc, collection } from 'firebase/firestore';
+import { ref, set } from 'firebase/database';
 
 const cx = classNames.bind(styles);
 
@@ -45,10 +47,10 @@ function Register() {
     const handleRegisterSubmit = (e) => {
         e.preventDefault();
 
-        if (!values.name || !values.email || !values.password || !values.cPass || !values.phone) {
-            setErrorMsg('Fill all fields!!');
-            return;
-        }
+        // if (!values.name || !values.email || !values.password || !values.cPass || !values.phone) {
+        //     setErrorMsg('Fill all fields!!');
+        //     return;
+        // }
 
         if (values.name.length < 8) {
             setErrorMsg('UserName must >= 8 characters');
@@ -93,27 +95,27 @@ function Register() {
             return;
         }
 
-        if (values.cPass !== values.password) {
-            setErrorMsg('Incorrect password');
-            setErrorAll(false);
-            setErrorName(false);
-            setErrorEmail(false);
-            setErrorPass(false);
-            setErrorCpass(true);
-            setErrorPhone(false);
-            return;
-        }
+        // if (values.cPass !== values.password) {
+        //     setErrorMsg('Incorrect password');
+        //     setErrorAll(false);
+        //     setErrorName(false);
+        //     setErrorEmail(false);
+        //     setErrorPass(false);
+        //     setErrorCpass(true);
+        //     setErrorPhone(false);
+        //     return;
+        // }
 
-        if (isNaN(values.phone)) {
-            setErrorMsg('PhoneNumber must be numbers');
-            setErrorAll(false);
-            setErrorName(false);
-            setErrorEmail(false);
-            setErrorPass(false);
-            setErrorCpass(false);
-            setErrorPhone(true);
-            return;
-        }
+        // if (isNaN(values.phone)) {
+        //     setErrorMsg('PhoneNumber must be numbers');
+        //     setErrorAll(false);
+        //     setErrorName(false);
+        //     setErrorEmail(false);
+        //     setErrorPass(false);
+        //     setErrorCpass(false);
+        //     setErrorPhone(true);
+        //     return;
+        // }
 
         setLoading(true);
         setErrorAll(false);
@@ -131,14 +133,20 @@ function Register() {
                 await updateProfile(user, {
                     displayName: values.name,
                 });
+
                 localStorage.setItem('user2', JSON.stringify(auth.currentUser));
-                navigate('/');
-                window.location.reload();
+
+                set(ref(db, 'users/' + values.name), {
+                    username: values.name,
+                    email: values.email,
+                });
+                // navigate('/');
+                // window.location.reload();
             })
             .catch((err) => {
                 setLoading(false);
                 console.log(err);
-                setErrorMsg('User name is already!!');
+                setErrorMsg(err);
             });
     };
 
@@ -242,7 +250,7 @@ function Register() {
                     </div>
 
                     <div className={cx('btn_wrapper')}>
-                        <span className={cx('error_msg')}>{errorMsg}</span>
+                        <span className={cx('error_msg')}>{errorMsg.replace('Firebase:', '')}</span>
                         <Button small primary className={cx('continue_btn')}>
                             Continue
                         </Button>

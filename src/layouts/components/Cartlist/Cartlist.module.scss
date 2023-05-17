@@ -1,3 +1,9 @@
 .wrapper {
     margin-bottom: 26px;
 }
+
+@media only screen and (max-width: 1024px) {
+    .cartlist-item {
+        margin-bottom: 30px;
+    }
+}

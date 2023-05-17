@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 function CartItem({ props }) {
     const [productModal, setProductModal] = useState(false);
 
-    const handleClickBuy = (product) => {
+    const handleClickBuy = () => {
         setProductModal(!productModal);
     };
 
@@ -31,7 +31,7 @@ function CartItem({ props }) {
                     </div>
                 </Link>
                 <div className={cx('product_btn')}>
-                    <Button primary onClick={() => handleClickBuy(props)}>
+                    <Button primary onClick={handleClickBuy}>
                         Chọn mua
                     </Button>
                 </div>
