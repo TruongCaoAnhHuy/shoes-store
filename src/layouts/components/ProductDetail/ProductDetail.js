@@ -1,14 +1,16 @@
-import styles from './ProductDetail.module.scss';
-import classNames from 'classnames/bind';
-import { MinusIcon, PlusIcon } from '~/components/Icons/Icon';
 import { useEffect, useState } from 'react';
-import Button from '~/components/Button/Button';
-import { productPopulars } from '~/assets/fakedata/product';
 import { useNavigate, useParams } from 'react-router-dom';
-import { product } from '~/assets/fakedata/product';
-import CartItem from '../CartItem/CartItem';
+
 import { useDispatch } from 'react-redux';
 import { AddCart } from '~/redux/cartSlice';
+
+import classNames from 'classnames/bind';
+import styles from './ProductDetail.module.scss';
+import { MinusIcon, PlusIcon } from '~/components/Icons/Icon';
+import Button from '~/components/Button/Button';
+import { productPopulars } from '~/assets/fakedata/product';
+import { product } from '~/assets/fakedata/product';
+import CartItem from '../CartItem/CartItem';
 
 const cx = classNames.bind(styles);
 
@@ -77,7 +79,7 @@ function ProductDetail() {
         <div className={cx('wrapper')}>
             <div className={cx('product')}>
                 <div className="row">
-                    <div className="col l-7">
+                    <div className="col l-7 c-12">
                         <div className={cx('product_image')}>
                             <div className={cx('image_list')}>
                                 <img src={productDetail.image} alt="shoes" />
@@ -88,44 +90,10 @@ function ProductDetail() {
                             </div>
                             <div className={`${cx('product_desc')} ${detailDesc ? cx('expand') : ''}`}>
                                 <h3 className={cx('product_desc_title')}>Chi tiết sản phẩm</h3>
-                                <p className={cx('product_desc_content')}>
-                                    Sự hiện diện của những chiếc áo thun basic cổ tròn trong tủ đồ của bạn chính là chìa
-                                    khóa giúp cho bạn có thêm nhiều outfit thú vị mà lại không cần đến quá nhiều món đồ.
-                                    Áo thun nữ cotton cổ tròn basic chính là vũ khí tiện dụng cho các chị em trong trang
-                                    phục hàng ngày!
-                                    <br />
-                                    <br />
-                                    <br />
-                                    Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc
-                                    áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính
-                                    sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ
-                                    khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay
-                                    cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc
-                                    biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính,
-                                    trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần
-                                    đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy
-                                    trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng
-                                    mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thâm
-                                    shuts mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi
-                                    đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co
-                                    giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động
-                                    <br />
-                                    <br />
-                                    <br />
-                                    Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc
-                                    áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính
-                                    sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ
-                                    khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay
-                                    cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc
-                                    biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính,
-                                    trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần
-                                    đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy
-                                    trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng
-                                    mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thâm
-                                    shuts mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi
-                                    đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co
-                                    giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động
-                                </p>
+                                <div
+                                    className={cx('product_desc_content')}
+                                    dangerouslySetInnerHTML={{ __html: productDetail.desc }}
+                                ></div>
                                 <Button
                                     primary
                                     className={cx('product_desc_toggle')}
@@ -136,7 +104,7 @@ function ProductDetail() {
                             </div>
                         </div>
                     </div>
-                    <div className="col l-5">
+                    <div className="col l-5 c-12">
                         <div className={cx('product_info')}>
                             <h1 className={cx('title')}>{productDetail.name}</h1>
                             <h2 className={cx('price')}>
@@ -170,12 +138,26 @@ function ProductDetail() {
                                     </span>
                                 </div>
                             </div>
-                            <div className={cx('option')}>
+                            <div className={`${cx('option')} ${cx('option-btn')}`}>
                                 <Button large primary onClick={addToCart}>
                                     Thêm vào giỏ
                                 </Button>
                                 <Button large primary onClick={clickBuyNow}>
                                     Mua ngay
+                                </Button>
+                            </div>
+                            <div className={`${cx('product_desc_mobile')} ${detailDesc ? cx('expand') : ''}`}>
+                                <h3 className={cx('product_desc_title')}>Chi tiết sản phẩm</h3>
+                                <p
+                                    className={cx('product_desc_content')}
+                                    dangerouslySetInnerHTML={{ __html: productDetail.desc }}
+                                ></p>
+                                <Button
+                                    primary
+                                    className={cx('product_desc_toggle')}
+                                    onClick={() => setDetailDesc(!detailDesc)}
+                                >
+                                    {detailDesc ? 'Thu gọn' : 'Xem thêm'}
                                 </Button>
                             </div>
                         </div>
@@ -189,7 +171,7 @@ function ProductDetail() {
                 </div>
                 <div className="row">
                     {productPopulars.map((productPopular) => (
-                        <div className="col l-3" key={productPopular.id}>
+                        <div className="col l-3 m-6 c-12" key={productPopular.id}>
                             <CartItem props={productPopular} />
                         </div>
                     ))}

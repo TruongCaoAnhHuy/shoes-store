@@ -3,27 +3,18 @@ import TippyHeadless from '@tippyjs/react/headless';
 import { Link, NavLink } from 'react-router-dom';
 import { useContext, useEffect, useRef, useState } from 'react';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { GetTotal } from '~/redux/cartSlice';
+
 import { auth, db } from '~/firebase';
+import { ref, set } from 'firebase/database';
 
 import images from '~/assets/image';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import { UserContext } from '~/App';
 import { Popper as PopperWrapper } from '~/layouts/components/Popper';
-import {
-    BackBtnIcon,
-    BackBtnIconMobile,
-    CartIcon,
-    LogOutIcon,
-    MenuBarIcon,
-    SearchIcon,
-    UserIcon,
-} from '~/components/Icons/Icon';
-import { useDispatch, useSelector } from 'react-redux';
-import { GetTotal } from '~/redux/cartSlice';
-import { onAuthStateChanged } from 'firebase/auth';
-import { onValue, ref, set } from 'firebase/database';
-import { ref as sRef } from 'firebase/storage';
+import { BackBtnIconMobile, CartIcon, LogOutIcon, MenuBarIcon, SearchIcon, UserIcon } from '~/components/Icons/Icon';
 
 const cx = classNames.bind(styles);
 
@@ -60,23 +51,17 @@ function Header() {
 
     const logOut = () => {
         auth.signOut();
-        localStorage.removeItem('user2');
-        // set(ref(db, 'users/' + context.userName), {
-        //     username: context.userName,
-        //     cart: carts,
-        // });
-        // localStorage.removeItem('cartItems');
-    };
 
-    // onAuthStateChanged(auth)
-    //     .then(
-    //         set(ref(db, 'users/' + context.userName), {
-    //             authTest: auth,
-    //             username: context.userName,
-    //             cart: carts,
-    //         }),
-    //     )
-    //     .catch((err) => console.log(err));
+        // lưu dữ liệu người dùng vào firebase
+        set(ref(db, 'users/' + auth.currentUser.displayName.replace('.', '')), {
+            userName: auth.currentUser.displayName,
+            email: auth.currentUser.email,
+            cart: carts,
+        });
+
+        localStorage.removeItem('user2');
+        localStorage.removeItem('cartItems');
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -142,7 +127,7 @@ function Header() {
                             <span className={cx('quality')}>{quantityLocal}</span>
                             <TippyHeadless
                                 interactive
-                                hideOnClick={false}
+                                hideOnClick={true}
                                 delay={[0, 1000]}
                                 placement="bottom-start"
                                 zIndex={99999}
@@ -190,7 +175,7 @@ function Header() {
                     ) : (
                         <>
                             <Button to="/login">Đăng nhập</Button>
-                            <Button primary to="/register">
+                            <Button primary to="/register" className={cx('register-btn')}>
                                 Đăng ký
                             </Button>
                         </>

@@ -2,32 +2,32 @@ const types = [
     {
         id: 1,
         type: 'Run One',
-        forHtml: 'run_one',
+        type_slug: 'run_one',
     },
     {
         id: 2,
         type: 'Run Active',
-        forHtml: 'run_active',
+        type_slug: 'run_active',
     },
     {
         id: 3,
         type: 'Run Cushion',
-        forHtml: 'run_cushion',
+        type_slug: 'run_cushion',
     },
     {
         id: 4,
         type: 'Run Fitness',
-        forHtml: 'run_fitness',
+        type_slug: 'run_fitness',
     },
     {
         id: 5,
         type: 'Run Support',
-        forHtml: 'run_support',
+        type_slug: 'run_support',
     },
     {
         id: 6,
         type: 'Kiprun Fast',
-        forHtml: 'kiprun_fast',
+        type_slug: 'kiprun_fast',
     },
 ];
 
@@ -35,27 +35,42 @@ const colors = [
     {
         id: 1,
         color: 'Trắng',
-        forHtml: 'white',
+        color_slug: 'white',
     },
     {
         id: 2,
         color: 'Xám',
-        forHtml: 'gray',
+        color_slug: 'gray',
     },
     {
         id: 3,
         color: 'Đen',
-        forHtml: 'black',
+        color_slug: 'black',
     },
     {
         id: 4,
         color: 'Hồng',
-        forHtml: 'pink',
+        color_slug: 'pink',
     },
     {
         id: 5,
+        color: 'Đỏ',
+        color_slug: 'red',
+    },
+    {
+        id: 6,
+        color: 'Cam',
+        color_slug: 'orange',
+    },
+    {
+        id: 7,
         color: 'Xanh lá',
-        forHtml: 'green',
+        color_slug: 'green',
+    },
+    {
+        id: 8,
+        color: 'Xanh dương',
+        color_slug: 'blue',
     },
 ];
 
@@ -83,6 +98,10 @@ const sizes = [
     {
         id: 6,
         size: '42',
+    },
+    {
+        id: 7,
+        size: '43',
     },
 ];
 

@@ -1,0 +1,41 @@
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.label {
+    display: flex;
+    width: 100%;
+    font-size: 1.3rem;
+    color: #8d8d8d;
+    margin-left: 10px;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        color: var(--primary);
+    }
+}
+
+.square {
+    border: 1px solid #8d8d8d;
+    height: 15px;
+    margin-right: 10px;
+    width: 15px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.input-hidden {
+    position: absolute;
+    // opacity: 0;
+    cursor: pointer;
+}
+
+//responsive
+@media only screen and (max-width: 600px) {
+    .label {
+        font-size: 1.1rem;
+    }
+}

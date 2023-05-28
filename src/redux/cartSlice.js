@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { ref, set } from 'firebase/database';
-import { db } from '~/firebase';
+
+const item = localStorage.getItem('cartItems') !== null ? JSON.parse(localStorage.getItem('cartItems')) : [];
 
 const initialState = {
-    carts: [],
+    carts: item,
     quantity: 0,
     total: 0,
 };
@@ -30,7 +30,7 @@ const cartSlice = createSlice({
                 alert('Login please !');
                 return;
             }
-            localStorage.setItem('cartItems', JSON.stringify(state.carts));
+            localStorage.setItem('cartItems', JSON.stringify(state.carts.map((item) => item)));
         },
 
         GetTotal: (state) => {

@@ -8,13 +8,13 @@ const cx = classNames.bind(styles);
 
 function MainLayout({ children }) {
     return (
-        <div>
+        <>
             <Header />
             <div className={cx('wrapper')}>
                 <div className={`${cx('container')} container`}>{children}</div>
             </div>
             <Footer />
-        </div>
+        </>
     );
 }
 

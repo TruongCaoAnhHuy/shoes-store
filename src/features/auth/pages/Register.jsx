@@ -1,11 +1,11 @@
 /* eslint-disable no-useless-escape */
 import classNames from 'classnames/bind';
 import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth, db } from '~/firebase';
-
-import { useState } from 'react';
+import { ref, set } from 'firebase/database';
 
 import styles from './auth.module.scss';
 import Button from '~/components/Button/Button';
@@ -15,8 +15,6 @@ import usePasswordToggle from '~/hooks/usePasswordToggle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Modal from '~/components/Modal/Modal';
-import { addDoc, collection } from 'firebase/firestore';
-import { ref, set } from 'firebase/database';
 
 const cx = classNames.bind(styles);
 
@@ -47,10 +45,31 @@ function Register() {
     const handleRegisterSubmit = (e) => {
         e.preventDefault();
 
-        // if (!values.name || !values.email || !values.password || !values.cPass || !values.phone) {
-        //     setErrorMsg('Fill all fields!!');
-        //     return;
-        // }
+        if (!values.name || !values.email || !values.password || !values.cPass || !values.phone) {
+            setErrorAll(false);
+            setErrorName(false);
+            setErrorEmail(false);
+            setErrorPass(false);
+            setErrorCpass(false);
+            setErrorPhone(false);
+            setErrorMsg('Fill all fields!!');
+            if (!values.name) {
+                setErrorName(true);
+            }
+            if (!values.email) {
+                setErrorEmail(true);
+            }
+            if (!values.password) {
+                setErrorPass(true);
+            }
+            if (!values.cPass) {
+                setErrorCpass(true);
+            }
+            if (!values.phone) {
+                setErrorPhone(true);
+            }
+            return;
+        }
 
         if (values.name.length < 8) {
             setErrorMsg('UserName must >= 8 characters');
@@ -72,7 +91,7 @@ function Register() {
         }
 
         if (!regexEmail.test(values.email)) {
-            setErrorMsg('Incorrect email');
+            setErrorMsg('Incorrect email address');
             setErrorAll(false);
             setErrorName(false);
             setErrorEmail(true);
@@ -84,7 +103,7 @@ function Register() {
 
         if (!regexPass.test(values.password)) {
             setErrorMsg(
-                'Password must be more than 8 characters and contain at least one letter, one number and a special character',
+                'Password >= 8 characters and contain at least 1 capital letter, 1 number and 1 special character',
             );
             setErrorAll(false);
             setErrorName(false);
@@ -95,27 +114,27 @@ function Register() {
             return;
         }
 
-        // if (values.cPass !== values.password) {
-        //     setErrorMsg('Incorrect password');
-        //     setErrorAll(false);
-        //     setErrorName(false);
-        //     setErrorEmail(false);
-        //     setErrorPass(false);
-        //     setErrorCpass(true);
-        //     setErrorPhone(false);
-        //     return;
-        // }
+        if (values.cPass !== values.password) {
+            setErrorMsg('Incorrect password');
+            setErrorAll(false);
+            setErrorName(false);
+            setErrorEmail(false);
+            setErrorPass(false);
+            setErrorCpass(true);
+            setErrorPhone(false);
+            return;
+        }
 
-        // if (isNaN(values.phone)) {
-        //     setErrorMsg('PhoneNumber must be numbers');
-        //     setErrorAll(false);
-        //     setErrorName(false);
-        //     setErrorEmail(false);
-        //     setErrorPass(false);
-        //     setErrorCpass(false);
-        //     setErrorPhone(true);
-        //     return;
-        // }
+        if (isNaN(values.phone)) {
+            setErrorMsg('PhoneNumber must be numbers');
+            setErrorAll(false);
+            setErrorName(false);
+            setErrorEmail(false);
+            setErrorPass(false);
+            setErrorCpass(false);
+            setErrorPhone(true);
+            return;
+        }
 
         setLoading(true);
         setErrorAll(false);
@@ -136,17 +155,19 @@ function Register() {
 
                 localStorage.setItem('user2', JSON.stringify(auth.currentUser));
 
+                // lưu dữ liệu người dùng vào firebase
                 set(ref(db, 'users/' + values.name), {
                     username: values.name,
                     email: values.email,
+                    cart: [],
                 });
-                // navigate('/');
-                // window.location.reload();
+
+                navigate('/');
+                window.location.reload();
             })
             .catch((err) => {
                 setLoading(false);
-                console.log(err);
-                setErrorMsg(err);
+                setErrorMsg(err.message);
             });
     };
 
@@ -250,7 +271,9 @@ function Register() {
                     </div>
 
                     <div className={cx('btn_wrapper')}>
-                        <span className={cx('error_msg')}>{errorMsg.replace('Firebase:', '')}</span>
+                        <span className={cx('error_msg')}>
+                            {errorMsg.replace('Firebase:', '').replace('auth/', '')}
+                        </span>
                         <Button small primary className={cx('continue_btn')}>
                             Continue
                         </Button>

@@ -7,11 +7,6 @@ import { useLayoutEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Decrease, GetTotal, Increase, RemoveCart } from '~/redux/cartSlice';
 import { useEffect } from 'react';
-import { onValue, ref } from 'firebase/database';
-import { db } from '~/firebase';
-import { useContext } from 'react';
-import { UserContext } from '~/App';
-import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -19,8 +14,6 @@ function Cart() {
     const { carts, total, quantity } = useSelector((item) => item.user);
 
     const dispatch = useDispatch();
-
-    const context = useContext(UserContext);
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
@@ -31,23 +24,7 @@ function Cart() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [carts]);
 
-    // const [dataFirebase, setDataFirebase] = useState([]);
-    // useEffect(() => {
-    //     const starCountRef = ref(db, 'users/' + context.userName);
-    //     onValue(starCountRef, (snapshot) => {
-    //         const data = snapshot.val();
-    //         setDataFirebase(data.cart);
-    //         // localStorage.setItem('cartItems', JSON.stringify(data.cart));
-    //     });
-    // }, []);
-
-    // console.log(dataFirebase);
-
     const cartLocalstorage = JSON.parse(localStorage.getItem('cartItems'));
-
-    cartLocalstorage.map((total) => {
-        console.log(total);
-    });
 
     return (
         <div className={cx('wrapper')}>
@@ -55,26 +32,12 @@ function Cart() {
                 <div className="col l-4 m-12 c-12">
                     <PopperWrapper className={cx('cart_info')}>
                         <p className={cx('title')}>
-                            Bạn đang có{' '}
-                            <span>
-                                {quantity
-                                    ? quantity
-                                    : cartLocalstorage.reduce(
-                                          (totalLocal, curr) => totalLocal + Number(curr.quantity),
-                                          0,
-                                      )}
-                            </span>{' '}
-                            sản phẩm trong giỏ hàng
+                            Bạn đang có <span>{quantity}</span> sản phẩm trong giỏ hàng
                         </p>
                         <div className={cx('price')}>
                             <p className={cx('price_label')}>Thành tiền</p>
                             <h2 className={cx('price_value')}>
-                                {total
-                                    ? total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                                    : cartLocalstorage
-                                          .reduce((totalLocal, curr) => totalLocal + Number(curr.price), 0)
-                                          .toString()
-                                          .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                                {total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
                             </h2>
                         </div>
                         <Button

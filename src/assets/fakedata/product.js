@@ -8,9 +8,23 @@ const product = [
         name: 'Giày chạy bộ Run One - Xám',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunone-xam',
-        size: [40, 41, 42],
+        type_slug: 'run_one',
+        color_slug: ['gray'],
+        size: [40, 41, 42, 43],
     },
     {
         id: 2,
@@ -19,9 +33,23 @@ const product = [
         name: 'Giày chạy bộ Run One - Xám nhạt',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunone-xamnhat',
-        size: [37, 38, 39, 40],
+        type_slug: 'run_one',
+        color_slug: ['gray'],
+        size: [37, 38, 39, 40, 43],
     },
     {
         id: 3,
@@ -31,8 +59,22 @@ const product = [
         name: 'Giày chạy bộ Run Cushion - Đen',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayruncushion-den',
+        type_slug: 'run_cushion',
+        color_slug: ['black'],
         size: [38, 39, 40],
     },
     {
@@ -42,8 +84,22 @@ const product = [
         name: 'Giày chạy bộ Run Active - Xanh lá',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunactive-xanhla',
+        type_slug: 'run_active',
+        color_slug: ['green'],
         size: [37, 38, 39, 40, 41, 42],
     },
     {
@@ -53,8 +109,22 @@ const product = [
         name: 'Giày chạy bộ Run Active - Trắng Hồng',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunactive-tranghong',
+        type_slug: 'run_active',
+        color_slug: ['white', 'pink'],
         size: [37, 38, 39],
     },
     {
@@ -64,9 +134,23 @@ const product = [
         name: 'Giày chạy bộ Run Fitness - Xám',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunfitness-xam',
-        size: [39, 40, 41, 42],
+        type_slug: 'run_fitness',
+        color_slug: ['gray'],
+        size: [38, 39, 40],
     },
     {
         id: 7,
@@ -76,8 +160,22 @@ const product = [
         name: 'Giày chạy bộ Run Support - Đen',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunsupport-den',
+        type_slug: 'run_support',
+        color_slug: ['black'],
         size: [40, 41, 42],
     },
     {
@@ -88,8 +186,22 @@ const product = [
         name: 'Giày chạy bộ Run Active - Đen Đỏ',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunactive-dendo',
+        type_slug: 'run_active',
+        color_slug: ['black', 'red'],
         size: [39, 40, 41, 42],
     },
     {
@@ -100,8 +212,22 @@ const product = [
         name: 'Giày chạy bộ Run Active - Xanh đen',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunactive-xanhden',
+        type_slug: 'run_active',
+        color_slug: ['black', 'blue'],
         size: [37, 38, 39, 40, 41, 42],
     },
     {
@@ -112,8 +238,22 @@ const product = [
         name: 'Giày chạy bộ Run Active - Đen cam',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunactive-dencam',
+        type_slug: 'run_active',
+        color_slug: ['black', 'orange'],
         size: [37, 38, 39, 40, 41, 42],
     },
     {
@@ -123,8 +263,22 @@ const product = [
         name: 'Giày chạy bộ Run Active - Trắng cam',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunactive-trangcam',
+        type_slug: 'run_active',
+        color_slug: ['white', 'orange'],
         size: [37, 38, 39, 40, 41, 42],
     },
     {
@@ -135,8 +289,22 @@ const product = [
         name: 'Giày chạy bộ Run Active - Đen hồng',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunactive-denhong',
+        type_slug: 'run_active',
+        color_slug: ['black', 'pink'],
         size: [37, 38, 39, 40, 41, 42],
     },
     {
@@ -146,8 +314,22 @@ const product = [
         name: 'Giày chạy bộ Run Support - Hồng',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunsupport-hong',
+        type_slug: 'run_support',
+        color_slug: ['pink'],
         size: [37, 38, 39, 40, 41, 42],
     },
     {
@@ -157,8 +339,22 @@ const product = [
         name: 'Giày chạy bộ Run Support - Xanh lá',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunsupport-xanhla',
+        type_slug: 'run_support',
+        color_slug: ['green'],
         size: [37, 38, 39, 40, 41, 42],
     },
     {
@@ -168,8 +364,22 @@ const product = [
         name: 'Giày chạy bộ Kiprun Fast - Xanh lam',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giaykimprunfast-xanhlam',
+        type_slug: 'kiprun_fast',
+        color_slug: ['green', 'blue'],
         size: [37, 38, 39],
     },
     {
@@ -179,8 +389,22 @@ const product = [
         name: 'Giày chạy bộ Run Support - Xanh đậm',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giaykimprunfast-xanhdam',
+        type_slug: 'run_support',
+        color_slug: ['green', 'black'],
         size: [38, 39, 40, 41],
     },
     {
@@ -190,9 +414,23 @@ const product = [
         name: 'Giày chạy bộ Run Fitness - Xanh xám',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giayrunfitness-xanhxam',
-        size: [41, 42],
+        type_slug: 'run_fitness',
+        color_slug: ['gray', 'blue'],
+        size: [41, 42, 43],
     },
     {
         id: 18,
@@ -201,8 +439,22 @@ const product = [
         name: 'Giày chạy bộ Kiprun Fast - Đen xanh lá',
         price: '194000',
         sale: '399000',
-        desc: 'Thiết kế đơn giản, form dáng tiện lợi của áo thun PPN4502. Tại sao chỉ với 1 chiếc áo thun nữ basic mà bạn có thể phối với 10 bộ độ khác nhau? Câu trả lời nằm ở chính sự đơn giản của chúng. Càng đơn giản, bạn lại càng dễ mix & match với những món đồ khác nhau.Áo thun nữ PPM4502 có thiết kế cổ tròn đơn giản, nhẹ nhàng tôn da. Tay cáo, form áo cũng không hề cầu kỳ, rất dễ mặc với nhiều thân hình khác nhau. Đặc biệt hơn, màu sắc của chiếc áo phông nữ cổ tròn này cũng rất nhã nhặn, trung tính, trơn màu. Sự tối giản từ thiết kế, đường may đến bảng màu giúp các chị em không cần đắn đo quá nhiều khi lựa chọn. Chất liệu cotton 95% được xử lý nghiêm ngặt, quy trình và công nghệ hiện đại nên mang tới cho chiếc áo sự thoải mái, mềm mại, thoáng mát ngay khi chạm vào. Cùng với đó, áo thun nữ cotton cổ tròn Yody có khả năng thấm hút mồ hôi rất tốt nên người mặc không bị cảm giác bí bách, dính dính trên da khi đổ mồ hôi vào mùa hè. Bên cạnh đó, sản phẩm cũng chưa 5% spandex - loại sợi giúp co giãn, đàn hồi hiệu quả thích hợp mặc tới nhiều môi trường, ngay cả khi vận động',
+        desc: `<p>Chào mừng đến với thương hiệu Shoes - nơi mang đến cho bạn những đôi giày tuyệt vời và phong cách để bạn tỏa sáng mỗi ngày.</p>
+        <br>
+        <p>Với tầm nhìn là trở thành thương hiệu giày hàng đầu trên toàn thế giới, Shoes không ngừng cải tiến và đổi mới để đáp ứng sự mong đợi của khách hàng.</p>
+        <br>
+        <p>Sự phong phú và đa dạng của bộ sưu tập giày của chúng tôi sẽ khiến bạn trầm trồ. Chúng tôi cung cấp từ những đôi sneakers thể thao đơn giản và thoải mái đến những đôi giày cao cấp với thiết kế tinh tế. Bất kể bạn đang tìm kiếm một đôi giày cho công việc, dạo phố hay dạo chơi, Shoes đều có những sản phẩm phù hợp với nhu cầu và phong cách của bạn.</p>
+        <br>
+        <p>Đội ngũ thiết kế của Shoes luôn tìm kiếm những ý tưởng sáng tạo và độc đáo để tạo ra những thiết kế giày đột phá. Chúng tôi không chỉ chú trọng vào vẻ ngoài mà còn đảm bảo rằng mỗi đôi giày đều mang lại sự thoải mái và hỗ trợ tối đa cho bàn chân của bạn. Chất liệu cao cấp và kỹ thuật sản xuất tiên tiến là những yếu tố quan trọng mà chúng tôi không bao giờ đặt qua mặt.</p>
+        <br>
+        <p>Bên cạnh chất lượng vượt trội, Shoes cũng cam kết đem lại sự phục vụ tận tâm và tốt nhất cho khách hàng. Đội ngũ nhân viên chuyên nghiệp và thân thiện của chúng tôi luôn sẵn sàng hỗ trợ bạn trong quá trình chọn lựa sản phẩm và giải đáp mọi thắc mắc của bạn.</p>
+        <br>
+        <p>Với Shoes, không chỉ là một đôi giày, mà còn là sự thể hiện cá nhân của bạn. Chúng tôi tin rằng mỗi bước đi mang đến cảm giác tự tin và phong cách riêng của bạn. Hãy khám phá bộ sưu tập giày đa dạng của chúng tôi và tạo nên những bước đi thật đặc biệt trong cuộc sống của bạn.</p>
+        <br>
+        <p>Hãy đến với Shoes và khám phá thế giới giày đầy màu sắc và phong cách. Chúng tôi cam kết mang lại sự hài lòng tới bạn.</p>`,
         pPath: 'giaykiprunfast-xanhla',
+        type_slug: 'kiprun_fast',
+        color_slug: ['green', 'black'],
         size: [37, 38, 39, 40, 41, 42],
     },
 ];

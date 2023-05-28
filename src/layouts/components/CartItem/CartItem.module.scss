@@ -83,4 +83,14 @@
             top: -10px;
         }
     }
+
+    .product_info {
+        &:hover img {
+            transform: translateX(-50%) scale(1);
+        }
+    }
+
+    .product_btn {
+        display: none;
+    }
 }

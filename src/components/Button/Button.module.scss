@@ -70,6 +70,10 @@
     .wrapper {
         padding: 15px 25px;
 
+        &:hover {
+            opacity: 1;
+        }
+
         +.wrapper {
             margin-left: 20px;
         }
@@ -81,6 +85,10 @@
 
     .wrapper {
         padding: 10px 15px;
+
+        &:hover {
+            opacity: 1;
+        }
 
         +.wrapper {
             margin-left: 20px;

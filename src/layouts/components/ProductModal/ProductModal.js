@@ -4,14 +4,10 @@ import classNames from 'classnames/bind';
 import { Popper as PopperWrapper } from '../Popper';
 import { MinusIcon, PlusIcon } from '~/components/Icons/Icon';
 import Button from '~/components/Button/Button';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { AddCart } from '~/redux/cartSlice';
 import { useNavigate } from 'react-router-dom';
-import { db } from '~/firebase';
-import { ref, set } from 'firebase/database';
-import { useContext } from 'react';
-import { UserContext } from '~/App';
 
 const cx = classNames.bind(styles);
 
@@ -45,21 +41,6 @@ function ProductModal(props) {
         return true;
     };
 
-    // const [cartItems, setCartItems] = useState([]);
-
-    // useEffect(() => {
-    //     const cartItemsRef = db.ref('cartItems');
-    //     cartItemsRef.on('value', (snapshot) => {
-    //         const items = snapshot.val();
-    //         setCartItems(items);
-    //     });
-
-    //     // Hủy đăng ký lắng nghe khi component bị unmount
-    //     return () => {
-    //         cartItemsRef.off('value');
-    //     };
-    // }, []);
-
     const addToCart = () => {
         if (check()) {
             const newItem = {
@@ -72,7 +53,6 @@ function ProductModal(props) {
                 image: props.value.image,
             };
             dispatch(AddCart(newItem));
-            // db.ref('cartItems').push(newItem);
         }
     };
 
@@ -132,7 +112,7 @@ function ProductModal(props) {
                                     </span>
                                 </div>
                             </div>
-                            <div className={cx('option')}>
+                            <div className={`${cx('option')} ${cx('option-btn')}`}>
                                 <Button large primary onClick={addToCart}>
                                     Thêm vào giỏ
                                 </Button>

@@ -17,7 +17,6 @@ function Slider() {
                 showThumbs={false}
                 showStatus={false}
                 showArrows={false}
-                showIndicators={false}
                 autoPlay
                 interval="3500"
                 emulateTouch
