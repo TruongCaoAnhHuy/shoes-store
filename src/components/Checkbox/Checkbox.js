@@ -9,8 +9,7 @@ function Checkbox(props) {
     return (
         <div className={cx('input-wrapper')} key={props.id}>
             <label className={cx('label')}>
-                <input className={cx('input-hidden')} type="checkbox" checked={checked} onChange={onChange} />
-                <span className={cx('square')}></span>
+                <input className={cx('input')} type="checkbox" checked={checked} onChange={onChange} />
                 {children}
             </label>
         </div>
